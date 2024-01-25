@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='jquery-3.7.1.min.js'></script>
+    <script>
+       $(document).ready(function(){
+        function multiAnim(){
+          var x=$(".astro");
+          x.animate({bottom:'0%'},5000);
+          x.animate({left:'30%'},5000);
+          x.animate({top:'0%'},5000);
+          x.animate({left:'80%'},500);
+          x.animate({top:'80%'},10000);
+
+        }
+        $(".astro").ready(function(){
+          multiAnim();
+        });
+       });
+    </script>
+</head>
+<body>
+    <style>
+        body{
+            height:100vh;
+            background-image: url("space.jpg");
+            background-size:  100% auto;
+        }
+        .astro{
+          position: absolute;
+          
+        }
+        @media(max-width:768px){
+          body{
+
+            background-size:  auto 100%;
+          } 
+        }
+
+    </style>
+
+   <img src="astronaut-apollo.gif"  class="astro"    alt="">
+
+
+
+</body>
+</html>
